@@ -26,11 +26,11 @@ np.random.seed(42)
 
 #data set rows:
 roll_no = np.arange(1,101)
-math_marks = np.random.randint(0,101,100)
-python_marks = np.random.randint(0,101,100)
-dsa_marks = np.random.randint(0,101,100)
-oop_marks = np.random.randint(0,101,100)
-system_design_marks = np.random.randint(0,101,100)
+math_marks = np.random.randint(20,101,100)
+python_marks = np.random.randint(20,101,100)
+dsa_marks = np.random.randint(20,101,100)
+oop_marks = np.random.randint(20,101,100)
+system_design_marks = np.random.randint(15,101,100)
 attendance = np.random.randint(60,101,100)
 
 #Combined Data Set:
