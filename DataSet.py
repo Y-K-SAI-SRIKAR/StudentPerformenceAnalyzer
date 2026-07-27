@@ -2,15 +2,6 @@
 # Data Set Creating :
 import numpy as np
 
-#data set cols index:
-ROLL = 0
-MATH = 1
-PYTHON = 2
-DSA = 3
-OOP = 4
-SYSTEM_DESIGN = 5
-ATTENDANCE = 6
-
 #data set cols:
 headers = np.array([
     "RollNo",
