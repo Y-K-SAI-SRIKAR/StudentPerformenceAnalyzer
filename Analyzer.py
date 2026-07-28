@@ -120,7 +120,7 @@ conds = [
     class_averages < 35
 ]
 choices = ['O','A','B','C','D','E','F']
-grds = np.select(conds, choices, default='0')
+grds = np.select(conds, choices, default='P')
 print('-'*50)
 print("Grade Report :")
 print('-'*50)
