@@ -56,8 +56,8 @@ Subject_Average_marks_of_Each_students = np.mean(students[:,MATH:ATTENDANCE],axi
 Average_attendence_of_class = np.mean(students[:,ATTENDANCE],axis=0)
 
 #Subject Mark Analysis :
-print("Total Students:",len(total_students),'\n')
-print("Total Subjects:",len(total_subjects),'\n')
+print("Total Students:",len(total_students))
+print("Total Subjects:",len(total_subjects))
 print("-"*50)
 print("Subject Wise Analysis :")
 print('-'*50)
@@ -96,8 +96,8 @@ print("Average Mark:",average_Sd_mark)
 print("Median Mark:",median_Sd_mark)
 print("SYTEM DESIGN Standard Deviation Mark:",deviation_Sd_mark)
 print('-'*50)
-print("Class Mark Averages:",Subject_Average_marks_of_Entire_Class,'\n')
-print("Class Average Attendance:",Average_attendence_of_class,'\n')
+print("Class Mark Averages:",Subject_Average_marks_of_Entire_Class)
+print("Class Average Attendance:",Average_attendence_of_class)
 print('-'*50)
 
 #Pass & Fail Count:
