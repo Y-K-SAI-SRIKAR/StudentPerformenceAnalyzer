@@ -125,7 +125,7 @@ print('-'*50)
 print("Grade Report :")
 print('-'*50)
 grades = np.column_stack((students[:,ROLL],grds))
-print(['Roll No','Grade'])
+print('[Roll No - Grade]')
 print(grades)
 print('-'*50)
 
@@ -140,4 +140,41 @@ print('-'*50)
 print(schps)
 print('-'*50)
 
-#<<<<<<<< ------- updated on 28-07-2026 @ 23:50 ------- >>>>>>>> < Author : Srikar Yerraguntla >
+#Subject wise Pass/Fail Report
+students_copy = students.astype(str)
+result = ["P", "F"]
+status = ["Promoted", "Detained"]
+math_mask = students[:, MATH] > 35
+python_mask = students[:, PYTHON] > 35
+dsa_mask = students[:, DSA] > 35
+oop_mask = students[:, OOP] > 35
+sd_mask = students[:, SYSTEM_DESIGN] > 35
+atdn_mask = students[:,ATTENDANCE]>65
+students_copy[:, MATH] = np.where(math_mask, result[0], result[1])
+students_copy[:, PYTHON] = np.where(python_mask, result[0], result[1])
+students_copy[:, DSA] = np.where(dsa_mask, result[0], result[1])
+students_copy[:, OOP] = np.where(oop_mask, result[0], result[1])
+students_copy[:, SYSTEM_DESIGN] = np.where(sd_mask, result[0], result[1])
+students_copy[:,ATTENDANCE] = np.where(atdn_mask,status[0],status[1])
+print('-'*50)
+print("Student Subject Wise Report:")
+print('-'*50)
+print(students_copy)
+print('-'*50)
+
+#Rankers List:
+ranks = np.arange(1,101)
+rolls = students[:,ROLL]
+marks = class_averages
+indices = np.argsort(marks)
+ranked_averages=marks[indices][::-1]
+rankers_rolls = rolls[indices[::-1]]
+rankers_list = np.column_stack((ranks,rankers_rolls,ranked_averages))
+print('-'*50)
+print("Rankers List of Class:")
+print("[Rank - Roll - Avg]")
+print('-'*50)
+print(rankers_list)
+print('-'*50)
+
+#<<<<<<<< ------- Project Finished on 29-07-2026 @ 23:00 ------- >>>>>>>> < Author : Srikar Yerraguntla >
